@@ -1,0 +1,61 @@
+.reactionBar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.reactionBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.reactionBtn:hover {
+    border-color: var(--primary-light);
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.reactionBtnActive {
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.emoji {
+    font-size: 1rem;
+}
+
+.count {
+    font-weight: 600;
+    color: var(--primary);
+    min-width: 1.5ch;
+}
+
+.label {
+    color: var(--text-secondary);
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .label {
+        display: inline;
+    }
+}

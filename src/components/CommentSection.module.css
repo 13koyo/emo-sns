@@ -1,0 +1,173 @@
+.commentSection {
+    margin-top: var(--space-md);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.commentList {
+    margin-bottom: var(--space-md);
+}
+
+.comment {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.commentAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.commentBody {
+    flex: 1;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.commentAuthor {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.commentTime {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.commentText {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.commentForm {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.commentInput {
+    flex: 1;
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.875rem;
+}
+
+.submitBtn {
+    background: var(--primary);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.blockBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+    margin-left: auto;
+}
+
+.blockBtn:hover {
+    opacity: 1;
+}
+
+.blockedSection {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+    border-top: 1px dashed var(--border);
+    padding-top: var(--space-sm);
+}
+
+.toggleBlockedBtn {
+    width: 100%;
+    padding: var(--space-sm);
+    background: var(--bg-secondary);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toggleBlockedBtn:hover {
+    background: var(--border);
+    color: var(--text-primary);
+}
+
+.blockedList {
+    margin-top: var(--space-sm);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: 0 var(--space-md);
+}
+
+.blockedComment {
+    opacity: 0.7;
+}
+
+.unblockBtn {
+    margin-left: auto;
+    background: transparent;
+    border: 1px solid var(--success);
+    color: var(--success);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.unblockBtn:hover {
+    background: var(--success);
+    color: white;
+}

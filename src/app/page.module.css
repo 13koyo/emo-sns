@@ -1,0 +1,36 @@
+.main {
+    padding-top: 80px;
+    padding-bottom: var(--space-2xl);
+    min-height: 100vh;
+}
+
+.timeline {
+    margin-top: var(--space-lg);
+}
+
+.loading,
+.empty {
+    text-align: center;
+    padding: var(--space-2xl);
+    color: var(--text-secondary);
+}
+
+.loadingEmoji,
+.emptyEmoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--space-md);
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

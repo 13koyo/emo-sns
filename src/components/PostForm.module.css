@@ -1,0 +1,137 @@
+.form {
+    margin-bottom: var(--space-xl);
+}
+
+.title {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.textarea {
+    min-height: 120px;
+    margin-bottom: var(--space-md);
+}
+
+.imagePreview {
+    position: relative;
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.imagePreview img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.removeImage {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.removeImage:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.moodSection {
+    margin-bottom: var(--space-md);
+}
+
+.moodLabel {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.moodButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.moodBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.moodBtn:hover {
+    border-color: var(--primary-light);
+    background: var(--accent);
+}
+
+.moodBtnActive {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    color: var(--text-primary);
+}
+
+.moodText {
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .moodText {
+        display: inline;
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.attachments {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.fileInput {
+    display: none;
+}
+
+.attachBtn {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.attachBtn:hover {
+    border-color: var(--primary-light);
+    background: var(--accent);
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+}

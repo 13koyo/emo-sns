@@ -1,0 +1,56 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: var(--space-md) 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.headerInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.logoEmoji {
+    font-size: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.logoText {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@media (max-width: 480px) {
+    .tagline {
+        display: none;
+    }
+}
