@@ -4,13 +4,13 @@
 アイデア、タスク、質問などをここに書き出すことで、スムーズに連携できます。
 
 ## 📝 Current Focus
-- Vercelへのデプロイ準備
-- 公開の意義の確認
+- ✅ Vercelデプロイ完了！ → https://emo-sns.vercel.app
+- Phase 2 機能の検討（ユーザー認証、AIモデレーション等）
 
 ## 🚀 Deployment Checklist
-- [ ] Vercelアカウント作成
-- [ ] GitHubリポジトリ作成 & Push
-- [ ] Vercel連携
+- [x] Vercelアカウント作成（GitHub連携）
+- [x] GitHubリポジトリ作成 & Push（https://github.com/13koyoocol/emo-sns）
+- [x] Vercel連携 & 本番デプロイ完了（2026/2/10）
 
 ## 💡 Ideas & Notes
 - AIモデレーションの導入 (Phase 2)
