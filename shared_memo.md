@@ -5,7 +5,12 @@
 
 ## 📝 Current Focus
 - ✅ Vercelデプロイ完了！ → https://emo-sns.vercel.app
+- 📱 **スマホ対応（レスポンシブ対応）の修正** ← 次の優先タスク
 - Phase 2 機能の検討（ユーザー認証、AIモデレーション等）
+
+## 🐛 修正TODO
+- [ ] 📱 スマホ（モバイル）でのレイアウト崩れを修正（レスポンシブ対応）
+  - デプロイ後にスマホで確認したところ、未対応だった（2026/2/10）
 
 ## 🚀 Deployment Checklist
 - [x] Vercelアカウント作成（GitHub連携）

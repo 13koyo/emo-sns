@@ -1,8 +1,3 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-
-const REPORTS_FILE = path.join(process.cwd(), 'data', 'reports.json');
-
 interface Report {
     id: string;
     postId: string;
@@ -10,14 +5,8 @@ interface Report {
     createdAt: string;
 }
 
-async function ensureReportsFile() {
-    try {
-        await fs.access(REPORTS_FILE);
-    } catch {
-        await fs.mkdir(path.dirname(REPORTS_FILE), { recursive: true });
-        await fs.writeFile(REPORTS_FILE, JSON.stringify([], null, 2));
-    }
-}
+// インメモリストレージ（Vercel対応）
+let reports: Report[] = [];
 
 export async function POST(request: Request) {
     try {
@@ -27,10 +16,6 @@ export async function POST(request: Request) {
             return Response.json({ error: 'postId and reason are required' }, { status: 400 });
         }
 
-        await ensureReportsFile();
-        const data = await fs.readFile(REPORTS_FILE, 'utf-8');
-        const reports: Report[] = JSON.parse(data);
-
         const newReport: Report = {
             id: Date.now().toString(36) + Math.random().toString(36).substr(2, 9),
             postId,
@@ -39,7 +24,6 @@ export async function POST(request: Request) {
         };
 
         reports.push(newReport);
-        await fs.writeFile(REPORTS_FILE, JSON.stringify(reports, null, 2));
 
         return Response.json({ success: true, reportId: newReport.id });
     } catch (error) {
