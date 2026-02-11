@@ -1,12 +1,11 @@
+import { supabase } from '@/lib/supabase';
+
 interface Report {
     id: string;
     postId: string;
     reason: string;
     createdAt: string;
 }
-
-// インメモリストレージ（Vercel対応）
-let reports: Report[] = [];
 
 export async function POST(request: Request) {
     try {
@@ -23,7 +22,18 @@ export async function POST(request: Request) {
             createdAt: new Date().toISOString(),
         };
 
-        reports.push(newReport);
+        const { error } = await supabase
+            .from('reports')
+            .insert({
+                id: newReport.id,
+                post_id: newReport.postId,
+                reason: newReport.reason,
+            });
+
+        if (error) {
+            console.error('Failed to save report to DB:', error);
+            return Response.json({ error: 'Failed to save report' }, { status: 500 });
+        }
 
         return Response.json({ success: true, reportId: newReport.id });
     } catch (error) {

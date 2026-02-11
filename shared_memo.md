@@ -1,3 +1,5 @@
+🌐 **サイトURL**: https://emo-sns.vercel.app
+
 # emo-sns Shared Memo 🤝
 
 このファイルは、ユーザー（Obsidian）とAIアシスタント（Antigravity）が情報を共有するためのメモです。
