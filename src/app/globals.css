@@ -274,3 +274,57 @@ textarea {
 .gap-md {
   gap: var(--space-md);
 }
+
+/* ===================================
+   レスポンシブ対応
+   =================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 20px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+  }
+
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  .card {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-lg: 16px;
+    --space-xl: 20px;
+    --space-2xl: 28px;
+  }
+
+  html {
+    font-size: 15px;
+  }
+
+  /* iOS自動ズーム防止: inputは16px以上必須 */
+  input,
+  textarea {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    padding: var(--space-md) var(--space-lg);
+    width: 100%;
+    text-align: center;
+    min-height: 44px;
+  }
+
+  .btn-secondary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

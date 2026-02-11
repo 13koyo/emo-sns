@@ -50,6 +50,18 @@
 }
 
 @media (max-width: 480px) {
+    .header {
+        padding: var(--space-sm) 0;
+    }
+
+    .logoEmoji {
+        font-size: 1.25rem;
+    }
+
+    .logoText {
+        font-size: 1.1rem;
+    }
+
     .tagline {
         display: none;
     }

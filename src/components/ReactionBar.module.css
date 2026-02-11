@@ -59,3 +59,21 @@
         display: inline;
     }
 }
+
+@media (max-width: 480px) {
+    .reactionBar {
+        gap: var(--space-xs);
+    }
+
+    .reactionBtn {
+        flex: 1;
+        justify-content: center;
+        padding: var(--space-sm) var(--space-xs);
+        min-height: 44px;
+        font-size: 0.8125rem;
+    }
+
+    .emoji {
+        font-size: 1.125rem;
+    }
+}

@@ -34,3 +34,9 @@
         transform: translateY(-10px);
     }
 }
+
+@media (max-width: 480px) {
+    .main {
+        padding-top: 64px;
+    }
+}
