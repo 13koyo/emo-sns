@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -41,7 +41,19 @@ export default function RootLayout({
       <body>
         {children}
       </body>
-      <GoogleAnalytics gaId="G-N16NKJ69SD" />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-N16NKJ69SD"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-N16NKJ69SD');
+        `}
+      </Script>
     </html>
   );
 }
