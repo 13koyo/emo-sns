@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { Post } from '@/app/page';
 import ReactionBar from './ReactionBar';
 import CommentSection from './CommentSection';
+import AmuletButton from './AmuletButton';
 import styles from './PostCard.module.css';
 
 interface PostCardProps {
@@ -106,6 +107,15 @@ export default function PostCard({ post, onReaction, onComment }: PostCardProps)
                 reactions={post.reactions}
                 onReaction={onReaction}
             />
+
+            <div className="flex justify-end px-4 mb-2">
+                <AmuletButton post={{
+                    id: Number(post.id),
+                    content: post.content,
+                    mood: post.mood,
+                    createdAt: post.createdAt
+                }} />
+            </div>
 
             {/* コメントセクション */}
             <div className={styles.commentToggle}>
